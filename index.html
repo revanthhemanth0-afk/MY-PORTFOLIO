@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyber Security Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+  // Fade in on load
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Fade out before navigating
+  document.querySelectorAll("a").forEach(link => {
+    if (link.hostname === window.location.hostname) { // internal links only
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = this.href;
+        document.body.classList.remove("fade-in");
+        setTimeout(() => {
+          window.location.href = target;
+        }, 600); // match transition duration
+      });
+    }
+  });
+</script>
+
+<body>
+  <!-- Navbar -->
+<header>
+  <h1 class="logo">🔐 My CyberSec Portfolio</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2 id="typing-text"></h2>
+    <p>Protecting systems. Securing data. Ethical hacking with purpose.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section   npm install -g firebase-tools  npm install -g firebase-tools  npm install -g firebase-toolsid="about">
+    <h2>👨‍💻 About Me</h2>
+    <p>I am passionate about cyber security, penetration testing, and ethical hacking.
+       I build secure systems and find vulnerabilities using practical tools and code.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>🛠 Skills</h2>
+    <div class="skills-box">
+      <div>Penetration Testing</div>
+      <div>Web Security</div>
+      <div>Network Security</div>
+      <div>Python for Security</div>
+      <div>Cryptography</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>📂 Projects</h2>
+    <div class="project-box">
+      <div class="card">🔍 Port Scanner (Python)</div>
+      <div class="card">🔍 Simple Website Vulnerability Scanner</div>
+      <div class="card">🛡 Password Strength Checker</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📩 Contact</h2>
+    <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Cyber Security Portfolio</p>
+  </footer>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const text = "Hello, I'm a Cyber Security Enthusiast";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>

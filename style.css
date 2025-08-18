@@ -1,0 +1,95 @@
+/* Global */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Arial', sans-serif;
+  background:#0a0a0a;
+  color:#f1f1f1;
+  line-height:1.6;
+}
+
+/* Navbar */
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px; background:#070707; position:sticky; top:0; z-index:10;
+}
+.logo { color:#00ffcc; font-size:20px; letter-spacing:1px; }
+nav a {
+  color:#f1f1f1; margin:0 12px; text-decoration:none; font-weight:600; font-size:14px;
+}
+nav a:hover { color:#00ffcc; }
+
+/* Hero */
+.hero {
+  text-align:center; padding:100px 20px; background:linear-gradient(135deg,#070707,#111);
+}
+.hero h2 { font-size:32px; margin-bottom:10px; color:#00ffcc; }
+.hero p { margin:10px 0 20px; color:#cfeee6; }
+.btn {
+  background:#00ffcc; color:#071014; padding:10px 20px; border-radius:6px;
+  text-decoration:none; font-weight:700;
+}
+.btn:hover { transform:translateY(-3px); transition:0.2s; }
+
+/* Sections */
+section { padding:60px 20px; text-align:center; }
+h2 { margin-bottom:20px; color:#00ffcc; }
+
+/* Skills */
+.skills-box {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:15px;
+}
+.skills-box div {
+  background:#0e0e0e; padding:15px 25px; border-radius:8px;
+  border:1px solid rgba(0,255,204,0.12); min-width:160px; transition:0.25s;
+}
+.skills-box div:hover { background:#00ffcc; color:#071014; transform:translateY(-6px); }
+
+/* Projects */
+.project-box { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.card {
+  background:#0e0e0e; padding:20px; width:250px; border-radius:10px;
+  border:1px solid rgba(0,255,204,0.12); transition:0.25s; font-weight:600;
+}
+.card:hover { background:#00ffcc; color:#071014; transform:translateY(-6px); }
+
+/* Contact */
+#contact a { color:#00ffcc; text-decoration:none; }
+#contact a:hover { text-decoration:underline; }
+
+/* Footer */
+footer {
+  background:#070707; text-align:center; padding:15px; margin-top:20px;
+  font-size:14px; color:#777;
+}
+
+/* Typing effect cursor */
+#typing-text {
+  display:inline-block;
+  border-right:3px solid #00ffcc;
+  padding-right:6px;
+  animation: blink 0.7s infinite;
+  font-weight:700;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Responsive small screens */
+@media (max-width:600px){
+  .hero { padding:60px 12px; }
+  header { padding:12px; }
+  nav a { margin:0 8px; font-size:13px; }
+}
+
+/* Centered container for specific sections */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.center-container section {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+  text-align: center;
+}
